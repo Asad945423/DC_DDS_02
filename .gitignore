@@ -1,0 +1,26 @@
+# Ignore virtual environments
+Yashi/
+.env/
+
+# Ignore requirements file
+requirements.txt
+
+# Ignore cache & system files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+
+# Ignore OS-specific files
+*.DS_Store
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore logs
+*.log
