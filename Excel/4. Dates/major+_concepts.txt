@@ -1,0 +1,6 @@
+Integer Part (45903):
+This is the count of days since January 1, 1900. For example, 45903 means 45,903 days have passed since that date—corresponding to the current date (September 3, 2025).
+
+Decimal Part (.6292415509):
+The numbers after the decimal represent the time as a fraction of a day. For example, .5 would be exactly noon (half the day), and .62924... 
+translates to a specific time past midnight on the same day. Multiply this decimal by 24 to get the hour (e.g., 0.6292 × 24 ≈ 15.1, or just after 3:00 PM).
