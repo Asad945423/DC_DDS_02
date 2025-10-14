@@ -1,8 +1,12 @@
+CREATE DATABASE employee_info
 
 
-Create database employee_details
+DROP DATABASE employee_info
 
-use employee_details
+
+
+
+use employee_info
 
 
 

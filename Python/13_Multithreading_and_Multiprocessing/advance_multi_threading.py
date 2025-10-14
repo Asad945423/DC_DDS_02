@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ### Multithreading With Thread Pool Executor
 
 from concurrent.futures import ThreadPoolExecutor
@@ -14,10 +14,10 @@ with ThreadPoolExecutor(max_workers=3) as executor:
     results=executor.map(print_number,numbers)
 
 for result in results:
-=======
+
 ### Multithreading With Thread Pool Executor
 
-from concurrent.futures import ThreadPoolExecutor
+    from concurrent.futures import ThreadPoolExecutor
 import time
 
 def print_number(number):
@@ -30,5 +30,5 @@ with ThreadPoolExecutor(max_workers=3) as executor:
     results=executor.map(print_number,numbers)
 
 for result in results:
->>>>>>> 3151975b (Initals)
+
     print(result)

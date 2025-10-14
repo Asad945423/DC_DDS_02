@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ### Multithreading
 ## When to use Multi Threading
 ###I/O-bound tasks: Tasks that spend more time waiting for I/O operations (e.g., file operations, network requests).
@@ -35,7 +35,7 @@ t2.join()
 
 finished_time=time.time()-t
 print(finished_time)
-=======
+
 ### Multithreading
 ## When to use Multi Threading
 ###I/O-bound tasks: Tasks that spend more time waiting for I/O operations (e.g., file operations, network requests).
@@ -72,4 +72,4 @@ t2.join()
 
 finished_time=time.time()-t
 print(finished_time)
->>>>>>> 3151975b (Initals)
+
