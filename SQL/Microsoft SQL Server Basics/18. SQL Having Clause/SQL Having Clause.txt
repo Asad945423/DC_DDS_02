@@ -1,0 +1,22 @@
+
+
+select * from dbo.Sales
+
+--Total Sales, Avg Sales, Total Quantity, Avg Quantity for each distinct product
+select 
+ProductID,
+sum(TotalAmount) [Sum of Sales],
+sum(Quantity) [Total Quantity],
+avg(TotalAmount) [Avg Amount],
+avg(Quantity) [Avg Quantity]
+from dbo.Sales
+group by 
+ProductID
+having sum(TotalAmount)<700 and sum(Quantity) = 21
+
+
+-- Used to filter grouped data based on aggregate functions.
+-- Works with Boolean conditions (AND, OR                                                                   
+-- Cannot be used without GROUP BY unless an aggregate function is present.
+-- Must be placed after the GROUP BY clause and before the ORDER BYclause (if used).
+-- Helps generate summary reports from large datasets.
