@@ -1,0 +1,90 @@
+
+
+
+select * from Students
+--Row_Number -> In case of a tie row numbers are assigned randomly
+select *,ROW_NUMBER() over(order by marks desc) as [Row Number]
+from Students
+
+--Rank -> if there's a tie next rank/ranks will be skipped
+select *,rank() over(order by marks desc) as [Rank Function]
+from Students
+
+--Dense_Rank -> if there's a tie ranks will not be skipped
+select *,DENSE_RANK() over(order by marks desc) [Dense Rank]
+from Students
+
+-----------------------------
+
+
+--Row_Number -> In case of a tie row numbers are assigned randomly
+select *,ROW_NUMBER() over(order by marks) as [Row Number]
+from Students
+
+--Rank -> if there's a tie next rank/ranks will be skipped
+select *,rank() over(order by marks) as [Rank Function]
+from Students
+
+--Dense_Rank -> if there's a tie ranks will not be skipped
+select *,DENSE_RANK() over(order by marks) [Dense Rank]
+from Students
+
+-----------------------------------------
+
+--Row_Number -> In case of a tie row numbers are assigned randomly
+select *,ROW_NUMBER() over(order by marks asc) as [Row Number]
+from Students
+
+--Rank -> if there's a tie next rank/ranks will be skipped
+select *,rank() over(order by marks asc) as [Rank Function]
+from Students
+
+--Dense_Rank -> if there's a tie ranks will not be skipped
+select *,DENSE_RANK() over(order by marks asc) [Dense Rank]
+from Students
+
+
+
+
+
+--- The row number have to be assigned according to the marks column
+--to each one of the record, but it has to be done for each subject.
+-- a window has to be created basically for each subject.
+
+select *, ROW_NUMBER() OVER(partition by subject order by marks desc) [Row Number Desc]
+from Students
+
+select *, ROW_NUMBER() OVER(partition by subject order by marks) [Row Number Asc]
+from Students
+
+select *, ROW_NUMBER() OVER(partition by student_name order by marks desc) [Row Number Desc]
+from Students
+
+select *, ROW_NUMBER() OVER(partition by student_name order by marks) [Row Number ASC]
+from Students
+
+select *, RANK() OVER(partition by student_name order by marks desc) [Rank Desc]
+from Students
+
+select *, RANK() OVER(partition by student_name order by marks) [Rank ASC]
+from Students
+
+select *, DENSE_RANK() OVER(partition by student_name order by marks desc) [Dense Rank Desc]
+from Students
+
+select *, DENSE_RANK() OVER(partition by student_name order by marks) [Dense Rank ASC]
+from Students
+
+
+select *, RANK() OVER(partition by subject order by marks desc) [Rank Desc]
+from Students
+
+select *, RANK() OVER(partition by subject order by marks) [Rank Asc]
+from Students
+
+
+select *, DENSE_RANK() OVER(partition by subject order by marks desc) [Dense Desc]
+from Students
+
+select *, DENSE_RANK() OVER(partition by subject order by marks) [DENSE Asc]
+from Students
